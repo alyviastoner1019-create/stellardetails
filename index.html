@@ -258,7 +258,8 @@ body { background: #120e18; letter-spacing: .005em; }
 .topbar a { color:#d2b4fa; }
 header { position:sticky; top:0; background:rgba(20,14,27,.94); border-bottom:1px solid rgba(181,138,232,.18); backdrop-filter:blur(18px); }
 .nav { min-height:88px; }
-.brand-mark { width:46px; height:46px; border:1px solid rgba(205,173,245,.8); background:linear-gradient(145deg,rgba(181,138,232,.2),rgba(181,138,232,.04)); box-shadow:0 0 26px rgba(181,138,232,.12); font-family:"Playfair Display",Georgia,serif; font-size:17px; }
+.brand-mark { width:64px; height:64px; flex-shrink:0; border:0; border-radius:0; background:transparent; }
+.brand-mark img { display:block; width:100%; height:100%; object-fit:contain; }
 .brand-name { letter-spacing:.16em; font-size:13px; }
 .brand-name span { color:#c5b5d1; letter-spacing:.22em; }
 .nav-links { gap:clamp(14px,2vw,28px); font-size:12px; letter-spacing:.04em; }
@@ -312,8 +313,9 @@ section { padding:108px 0; }
 .work-post figcaption a:hover { color:#d2b4fa; }
 .work-note { color:#bcaec5; }
 .about { background:linear-gradient(135deg,#1e1628,#171020 70%); }
-.feature-panel { background:radial-gradient(circle at 50% 45%,#49305d,#251a31 68%,#1a1322); border-color:rgba(196,157,232,.24); border-radius:5px; }
-.feature-panel:before { border-color:rgba(197,163,239,.48); box-shadow:0 0 0 35px rgba(181,138,232,.08),0 0 0 70px rgba(181,138,232,.045); }
+.feature-panel { background:#000; border-color:rgba(196,157,232,.24); border-radius:5px; }
+.feature-panel:before { content:none; }
+.feature-panel img { display:block; width: min(78%, 300px); height:auto; margin:20px 0 60px; }
 .feature-panel strong { font-family:"Playfair Display",Georgia,serif; font-weight:500; letter-spacing:-.08em; }
 .about-copy h2 { font-size:clamp(38px,4.4vw,55px); }
 .about-copy p { line-height:1.95; color:#c8bdcf; }
@@ -367,7 +369,7 @@ footer { background:#100b16; border-top:1px solid rgba(181,138,232,.18); }
   .nav { flex-wrap:wrap; }
   .nav .btn { margin-left:auto; }
   .brand-name { font-size:11px; }
-  .brand-mark { width:40px; height:40px; }
+  .brand-mark { width:48px; height:48px; }
   .hero { min-height:570px; }
   .hero-content { padding:70px 0; }
   h1 { font-size:clamp(48px,14vw,66px); }
@@ -387,7 +389,7 @@ footer { background:#100b16; border-top:1px solid rgba(181,138,232,.18); }
 <div id="app">
   <div class="topbar"><div class="container topbar-inner"><span>DETAILING • EXTERIOR CLEANING • PROPERTY CARE</span><span>Broken Arrow, OK 74012 &nbsp; | &nbsp; <a href="tel:9183501315">918-350-1315</a> &nbsp; / &nbsp; <a href="tel:+19189988896">918-998-8896</a></span></div></div>
   <header><div class="container nav">
-    <a class="brand" href="#home" aria-label="Stellar Details home"><div class="brand-mark">SD</div><div class="brand-name">STELLAR DETAILS<span>LLC · BROKEN ARROW, OK</span></div></a>
+    <a class="brand" href="#home" aria-label="Stellar Details home"><div class="brand-mark"><img src="/assets/images/stellar-details-emblem.png" alt="" width="447" height="447"></div><div class="brand-name">STELLAR DETAILS<span>LLC · BROKEN ARROW, OK</span></div></a>
     <nav class="nav-links" aria-label="Main navigation"><a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
     <a class="btn btn-primary" href="#inquiry">Book an Appointment ↗</a>
   </div></header>
@@ -448,56 +450,56 @@ footer { background:#100b16; border-top:1px solid rgba(181,138,232,.18); }
       <p class="work-note">Posts and videos are hosted by Instagram. If a post doesn't load here, use its link to view it on Instagram.</p>
     </div></section>
     <section class="about" id="about"><div class="container about-grid">
-      <div class="feature-panel" aria-label="Stellar Details monogram"><strong>SD</strong><small>DETAILS THAT MAKE A DIFFERENCE</small></div>
+      <div class="feature-panel"><img src="/assets/images/stellar-details-emblem.png" alt="Stellar Details emblem" width="447" height="447" loading="lazy"><small>DETAILS THAT MAKE A DIFFERENCE</small></div>
       <div class="about-copy"><div class="eyebrow">The Stellar difference</div><h2>Details matter.<br>So does who you trust.</h2><p>With 5+ years in business, Stellar Details LLC brings experience and care to vehicle detailing and exterior property services in Broken Arrow, Oklahoma. Whether it's the inside of your vehicle or the outside of your property, we're here to help you get it looking its best.</p><p>Reach out to Spencer to talk through your project, ask about services, or request an appointment.</p>
       <ul class="check-list"><li>Interior steam cleaning</li><li>Carpet shampooing</li><li>Paint correction</li><li>Ceramic coatings</li><li>Power washing</li><li>Yard & gutter work</li></ul>
       <a class="btn btn-primary" href="tel:9183501315">Talk to Stellar Details ↗</a></div>
     </div></section>
     <section class="review" id="reviews" aria-labelledby="reviews-heading"><div class="container">
-      <div class="review-inner"><div><div class="review-label">Customer feedback</div><h2 id="reviews-heading">Good words.<br>From the people we work for.</h2></div><div class="review-rating"><strong>5.0 <span>/ 5</span></strong><div class="stars" aria-label="Overall rating: five out of five stars">★★★★★</div><div class="review-note">16 reviews · Google</div></div></div>
-      <p class="review-intro">From daily drivers to work trucks, here's what our customers have to say.</p>
+      <div class="review-inner"><div><div class="review-label">Google reviews</div><h2 id="reviews-heading">Good words.<br>From the people we work for.</h2></div><div class="review-rating"><strong>5.0 <span>/ 5</span></strong><div class="stars" aria-label="Overall rating: five out of five stars">★★★★★</div><div class="review-note">16 reviews · Google</div></div></div>
+      <p class="review-intro">All reviews featured here are from Google. From daily drivers to work trucks, here's what our customers have to say.</p>
       <div class="customer-review-grid">
         <figure class="customer-review">
           <blockquote><p>“Excellent, top of the line detailing! Done in a timely manner and the inside of my car was immaculate! Highly, highly recommend! …”</p></blockquote>
-          <figcaption><strong>Alyssa Alger</strong><span>Review excerpt</span></figcaption>
+          <figcaption><strong>Alyssa Alger</strong><span>Google review excerpt</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Spencer always does the best work! I have used him multiple times on multiple vehicles! From our dirtiest work trucks to keeping my Lincoln looking brand new, I know he will go above and beyond! You will not regret using him to keep your car fresh!”</p></blockquote>
-          <figcaption><strong>Katy Anderson</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Katy Anderson</strong><span>Google review</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Spencer is awesome and he does great work, especially for the price! I highly recommend his service. If you have any issues he comes back and fixes them, I haven&#x27;t had issues after a cleaning but it&#x27;s nice to know he will come back!”</p></blockquote>
-          <figcaption><strong>Lonely Soul</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Lonely Soul</strong><span>Google review</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Bought a used car that was previously owned by someone who smoked. There was a strong cigarette smell in the car that was not going away no matter what I did. I brought it in to be detailed and it worked like a charm! So so happy with the results! …”</p></blockquote>
-          <figcaption><strong>Cori Radford</strong><span>Review excerpt</span></figcaption>
+          <figcaption><strong>Cori Radford</strong><span>Google review excerpt</span></figcaption>
         </figure>
       </div>
-      <details class="more-reviews"><summary>Read more customer reviews <span aria-hidden="true">+</span></summary><div class="customer-review-grid">
+      <details class="more-reviews"><summary>Read more Google reviews <span aria-hidden="true">+</span></summary><div class="customer-review-grid">
         <figure class="customer-review">
           <blockquote><p>“Spencer and his team hit all the marks. Great communication leading up to the appointment. Quick and accurate work. …”</p></blockquote>
-          <figcaption><strong>Jay Toral</strong><span>Review excerpt</span></figcaption>
+          <figcaption><strong>Jay Toral</strong><span>Google review excerpt</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“We get our company fleet cleaned by Spencer at Stellar once a month. We lover the service and are always happy with the results.”</p></blockquote>
-          <figcaption><strong>Jonathan Allen</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Jonathan Allen</strong><span>Google review</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Spencer did a fantastic detail job on our company truck. Definitely recommend him for a great detail.”</p></blockquote>
-          <figcaption><strong>Art Llamas</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Art Llamas</strong><span>Google review</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Stellar Details has always done an excellent job with detailing our vehicles. Fantastic work and we highly recommend ⭐️ ⭐️ ⭐️⭐️⭐️”</p></blockquote>
-          <figcaption><strong>Suzanne Porske</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Suzanne Porske</strong><span>Google review</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Spencer is very detail oriented and makes sure he gets every inch of your car! My car looked brand new after he was done with it! …”</p></blockquote>
-          <figcaption><strong>Maria Cook</strong><span>Review excerpt</span></figcaption>
+          <figcaption><strong>Maria Cook</strong><span>Google review excerpt</span></figcaption>
         </figure>
         <figure class="customer-review">
           <blockquote><p>“Wow!!!! Have never seen a car this clean!”</p></blockquote>
-          <figcaption><strong>Coach Mace Farquhar</strong><span>Customer review</span></figcaption>
+          <figcaption><strong>Coach Mace Farquhar</strong><span>Google review</span></figcaption>
         </figure>
       </div></details>
       <p class="review-source">Selected Google reviews. Rating and review count reflect the information shared with us and are not updated automatically.</p>
@@ -522,6 +524,9 @@ footer { background:#100b16; border-top:1px solid rgba(181,138,232,.18); }
           <label>Email address<input type="email" name="email" autocomplete="email" maxlength="254" required></label>
           <label>Phone number (optional)<input type="tel" name="phone" autocomplete="tel" maxlength="40"></label>
           <label>Service<select name="service" required><option value="">Choose a service</option><option>Interior Detailing</option><option>Paint Correction</option><option>Ceramic Coatings</option><option>Power Washing</option><option>Window Cleaning</option><option>Property Maintenance</option><option>Multiple services / Other</option></select></label>
+          <label>Vehicle year (optional)<input type="text" name="vehicle-year" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="e.g., 2022" title="Enter a four-digit vehicle year."></label>
+          <label>Vehicle make (optional)<input type="text" name="vehicle-make" maxlength="100" placeholder="e.g., Ford"></label>
+          <label class="form-wide">Vehicle model (optional)<input type="text" name="vehicle-model" maxlength="150" placeholder="e.g., Bronco"></label>
           <label class="form-wide">Project details<textarea name="message" rows="5" maxlength="5000" placeholder="Tell us about your vehicle or property and any preferred dates." required></textarea></label>
         </div>
         <button class="btn btn-primary" type="submit">Send Request ↗</button>
